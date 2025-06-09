@@ -1,0 +1,48 @@
+{
+  "info": {
+    "name": "TP1 API Mensajes",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear mensaje",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"user\":\"Ana\",\"mensaje\":\"Hola TP1\"}"},
+        "url": {"raw": "http://127.0.0.1:5000/mensajes", "protocol": "http", "host": ["127.0.0.1"], "port": "5000", "path": ["mensajes"]}
+      }
+    },
+    {
+      "name": "Listar mensajes",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://127.0.0.1:5000/mensajes", "protocol": "http", "host": ["127.0.0.1"], "port": "5000", "path": ["mensajes"]}
+      }
+    },
+    {
+      "name": "Obtener mensaje por ID",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://127.0.0.1:5000/mensajes/1", "protocol": "http", "host": ["127.0.0.1"], "port": "5000", "path": ["mensajes", "1"]}
+      }
+    },
+    {
+      "name": "Actualizar mensaje",
+      "request": {
+        "method": "PUT",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"user\":\"Ana\",\"mensaje\":\"Mensaje actualizado\"}"},
+        "url": {"raw": "http://127.0.0.1:5000/mensajes/1","protocol":"http","host":["127.0.0.1"],"port":"5000","path":["mensajes","1"]}
+      }
+    },
+    {
+      "name": "Eliminar mensaje",
+      "request": {
+        "method": "DELETE",
+        "url": {"raw": "http://127.0.0.1:5000/mensajes/1","protocol":"http","host":["127.0.0.1"],"port":"5000","path":["mensajes","1"]}
+      }
+    }
+  ]
+}
