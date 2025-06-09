@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensajes del Blog</title>
+</head>
+<body>
+    <h1>Mensajes del Blog</h1>
+    <ul>
+        {% for mensaje in mensajes %}
+        <li><strong>{{ mensaje.user }}</strong>: {{ mensaje.mensaje }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
